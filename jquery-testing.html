@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Try jQuery Selector</title>
+<link rel="stylesheet" type="text/css" href="/trystyle.css" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+ // GPT slots
+ var gptAdSlots = [];
+ googletag.cmd.push(function() {
+
+   var leaderMapping = googletag.sizeMapping().
+   // Mobile ad
+   addSize([0, 0], [320, 50]). 
+   // Vertical Tablet ad
+   addSize([468, 0], [468, 60]). 
+   // Horizontal Tablet
+   addSize([728, 0], [728, 90]).
+   // Desktop and bigger ad
+// addSize([970, 0], [[728, 90], [970, 90]]).build();
+   addSize([970, 0], [728, 90]).build();
+// gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+   gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+   defineSizeMapping(leaderMapping).addService(googletag.pubads());
+
+
+   googletag.pubads().setTargeting("content","jquery");
+   googletag.enableServices();
+ });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
+    }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+body {
+ line-height:15px;
+}
+
+h1 {
+ line-height:34px;
+ margin-bottom:0px;
+ margin-top:10px;
+}
+#iframeResult
+{
+font-family:Arial;
+}
+#iframeResult * :not(.noSel)
+{
+border:1px solid transparent;
+}
+#iframeResult span.markup
+{
+color:#aaaaaa;
+font-size:12px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight:normal;
+}
+
+#selectorOptions div {
+ font-family:"Courier New", Courier, monospace;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ font-size:14px; 
+ line-height:16px;
+ cursor:pointer;
+}
+#selectorOptions div:hover {
+ background-color:#f1f1f1;
+}
+#content, #footer {
+ background-color:#f1f1f1;
+}
+#content {
+ border-top:none;
+}
+.headerText, #footer {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+ color:#222222;
+}
+#selectorDescription {
+ padding:10px;
+ display:none;
+ width:225px;
+ background-color:#f1f1f1;
+ border:1px solid #d3d3d3;
+ border-radius:5px;
+ position:fixed;
+ top:150px;
+ left:230px;
+ text-align:center;
+ font-family:Verdana;
+ font-size:12px;
+}
+.smalldevice {
+ display:none;
+}
+@media screen and (max-width: 1160px)  {
+    .smalldevice {
+     display:inline;
+    }
+    .largedevice {
+     display:none;
+    }
+}
+@media screen and (max-width: 950px)  {
+ #selectorDescription {
+  left:200px;
+      width:150px;
+ }
+}
+@media only screen and (max-width: 768px) {
+    #textareaCode {
+        padding:5px;
+    }
+    .iframewrapper {
+        overflow: auto;
+    }
+    .container {
+     min-width:320px;
+    }
+    .textarea, .iframe {
+        height:97%;
+    }
+    .textareacontainer, .iframecontainer {
+        height:50%;
+        float:none;
+        width:98%;
+    }
+    .textarea, .iframe {
+        height:97%;
+        padding:15px;            
+    }
+ .textareacontainer {
+     height:300px;
+ }
+ 
+ .container {
+     bottom:initial;
+     height:initial;
+     min-width:250px;
+ }
+ #selectorDescription {
+  width:40%;
+  position:absolute;
+  top:55px;
+  left:initial;
+  right:10%;
+ }
+}
+@media screen and (max-height: 700px) {
+    .footerText {
+     display:none;
+    }
+}
+</style>
+</head>
+<body >
+
+<div class="container">
+  
+  <div class="iframecontainer">
+    <div class="iframe">
+      <div style="overflow:auto;">
+        <div class="headerText">Result:</div>
+      </div>
+      <div class="iframewrapper">
+        <div id="iframeResult" class="result_output" style="overflow:auto;">
+        
+        
+       <div id="selectorResult" style="padding:5px;" class="noSel">
+       <div class="noSel">
+<h1>Welcome to My Homepage</h1>
+<div class="intro">
+
+<p>My name is Donald <span id="Lastname">Duck</span></p>
+
+<p id="my-Address">I live in Duckburg</p>
+
+<p>I have many friends:</p>
+</div>
+
+<ul id="Listfriends>
+
+    <li>Goofy</li>
+    <li>Mickey</li>
+    <li>Daisy</li>
+    <li>Pluto</li>
+
+</ul>
+
+<p>I really like Daisy!!</p>
+
+<p lang="it" title="Hello beautiful">Ciao bella</p>
+<h3>We are all animals!</h3>
+
+<p><b>My latest discoveries has led me to believe that we are all animals:</b></p>
+<table cellpadding="2" cellspacing="2">
+<tr>
+<th style="background-color:#f1f1f1;">Name</th>
+<th style="background-color:#f1f1f1;">Type of Animal</th>
+</tr>
+<tr>
+<td style="background-color:#f1f1f1;">Mickey</td>
+<td style="background-color:#f1f1f1;">Mouse</td>
+</tr>
+<tr>
+<td style="background-color:#f1f1f1;">Goofey</td>
+<td style="background-color:#f1f1f1;">Dog</td>
+</tr>
+<tr>
+<td style="background-color:#f1f1f1;">Daisy</td>
+<td style="background-color:#f1f1f1;">Duck</td>
+</tr>
+<tr>
+<td style="background-color:#f1f1f1;">Pluto</td>
+<td style="background-color:#f1f1f1;">Dog</td>
+</tr>
+</table>
+</div>
+
+<div class="noSel newsletter" style="background-color:#99D6FF;border:1px solid #0099FF;padding:10px;xfont-size:12px;">
+<form>
+ <h4>Subscribe to my newsletter:</h4>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">Name:</div><div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">E-mail:</div><div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">Password:</div><div style="width:180px;float:left;"><input type="password" style="width:150px" name="password" value="password" /></div>
+    </div>
+    Female: <input name="rr" type="radio" id="rr1" checked="checked" style="outline:2px solid transparent"/>
+ Male: <input name="rr" type="radio" id="rr2" style="outline:2px solid transparent" />
+ Other: <input name="rr" type="radio" id="rr3" disabled="disabled" style="outline:2px solid transparent" />  
+ <div style="overflow:auto;">
+  <h4>Newscategories:</h4>
+  <div style="width:70px;float:left;">Ducks:</div><div style="width:20px;float:left;"><input id="cc1" type="checkbox" checked="checked" style="outline:2px solid transparent" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:70px;float:left;">Dogs:</div><div style="width:20px;float:left;"><input id="cc2" type="checkbox" style="outline:2px solid transparent" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:70px;float:left;">Humans:</div><div style="width:20px;float:left;"><input id="cc3" type="checkbox" style="outline:2px solid transparent" /></div>
+ </div>
+ <div class="noSel" style="clear:both;"></div>   
+ <input class="noSel" type="reset" value="Reset" style="outline:2px solid transparent" />
+ <input class="noSel" type="submit" value="Submit" style="outline:2px solid transparent" /> 
+ <input class="noSel" type="button" value="Cancel" style="outline:2px solid transparent" />
+ <h4>My Favourite:</h4>
+ <select multiple class="myselect">
+  <option>Donald</option>
+  <option selected>Mickey</option>
+  <option>Goofy</option>  
+ </select>
+ <h4>Upload image:</h4>
+ <input type="file">
+ <input type="image" src="arrow-r.jpg" style="border:3px solid transparent">
+</form>
+</div>
+
+<br>
+
+
+
+
+       </div>
+
+  </div>
+        
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footerText">Click the jQuery Selectors and see the specified element(s) get selected. &copy; <a href="https://www.w3schools.com">w3schools.com</a></div>      
+</div>
+
+<code>
+
+
+
+</code>
+
+
+
+</body>
+</html>
