@@ -1,0 +1,10 @@
+
+Programming Questions
+----------------------
+
+1) How can you retrieve the center character of an array of strings?
+2) How could you write code to reverse a string?
+3) Create a loop to find a series of Fibonacci numbers.
+4) Create a function that determines if a number or string is a palindrome
+5) How do you find duplicates in array if there is more than one duplicate?
+6) Find if two words are anagrams of each other.

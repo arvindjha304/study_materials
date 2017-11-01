@@ -1,0 +1,583 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang16393\deflangfe16393{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue255;\red255\green255\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\sa200\sl276\slmult1\lang9\f0\fs22\tab\tab\par
+\tab\b\fs28 Top 100 PHP interview questions and answers are below\par
+\b0\fs22\par
+\cf1 Questions : 1 Who is the father of PHP ? \par
+\cf0 Answers : 1 Rasmus Lerdorf is known as the father of PHP.  \par
+\cf1 Questions : 2 What is the difference between $name and $$name? \par
+\cf0  Answers : 2 $name is variable whereas $$name is reference variable \par
+like $name=sonia and $$name=singh so $sonia value is singh. \par
+\cf1 Questions : 3 How can we submit a form without a submit button?  \par
+\cf0 Answer : 3 Java script submit() function is used for submit form without submit button\par
+on click call document.formname.submit()  \par
+\cf1 Questions : 4 In how many ways we can retrieve the data in the result set of\par
+MySQL using PHP?  \par
+\cf0 Answer : 4 We can do it by 4 Ways\par
+1. mysql_fetch_row. , 2. mysql_fetch_array , 3. mysql_fetch_object\par
+4. mysql_fetch_assoc  \par
+\cf1 Questions : 5 What is the difference between mysql_fetch_object and\par
+mysql_fetch_array?  \cf0\par
+Answers : 5 mysql_fetch_object() is similar to mysql_fetch_array(), with one difference -\par
+an object is returned, instead of an array. Indirectly, that means that\par
+you can only access the data by the field names, and not by their\par
+offsets (numbers are illegal property names). \par
+\cf1 Questions : 6 What are the differences between Get and post methods.  \par
+\cf0 Answers : 6 There are some defference between GET and POST method \par
+1. GET Method have some limit like only 2Kb data able to send for request \par
+But in POST method unlimited data can we send \par
+2. when we use GET method requested data show in url but \par
+Not in POST method so POST method is good for send sensetive request \par
+\pard\cf1 Questions : 7 How can we extract string "pcds.co.in " from a string "\cf0{\field{\*\fldinst{HYPERLINK "http://info@pcds.co.in"}}{\fldrslt{\ul\cf2 http://info@pcds.co.in}}}\cf1\f0\fs22\par
+using regular expression of PHP?  \par
+\cf0 Answers : 7 preg_match("/^http:\\/\\/.+@(.+)$/","http://info@pcds.co.in",$matches);\par
+echo $matches[1]; \par
+\cf1 Questions : 8 How can we create a database using PHP and MySQL?  \par
+\cf0 Answers : 8 We can create MySQL database with the use of\par
+mysql_create_db("Database Name") \par
+\cf1 Questions : 9 What are the differences between require and include?  \par
+\cf0 Answers : 9 Both include and require used to include a file but when included file not found \par
+Include send Warning whereas Require send Fatal Error .\par
+\cf1 Questions : 10  Can we use include ("xyz.PHP") two times in a PHP page "index.PHP"?\par
+\cf0 Answers : 10   Yes we can use include("xyz.php") more than one time in any page. but it create a problem when xyz.php file contain some functions declaration then error will come for already declared function in this file else not a problem like if you want to show same content two time in page then must include it two time not a problem\par
+\cf1 Questions : 11   What are the different tables(Engine) present in MySQL, which one is default?  \par
+\cf0 Answers : 11  Following tables (Storage Engine) we can create\par
+1. MyISAM(The default storage engine IN MYSQL Each MyISAM table is stored on disk in three files. The files have names that begin with the table name and have an extension to indicate the file type. An .frm file stores the table format. The data file has an .MYD (MYData) extension. The index file has an .MYI (MYIndex) extension. )\par
+2. InnoDB(InnoDB is a transaction-safe (ACID compliant) storage engine for MySQL that has commit, rollback, and crash-recovery capabilities to protect user data.)\par
+3. Merge\par
+4. Heap (MEMORY)(The MEMORY storage engine creates tables with contents that are stored in memory. Formerly, these were known as HEAP tables. MEMORY is the preferred term, although HEAP remains supported for backward compatibility. )\par
+5. BDB (BerkeleyDB)(Sleepycat Software has provided MySQL with the Berkeley DB transactional storage engine. This storage engine typically is called BDB for short. BDB tables may have a greater chance of surviving crashes and are also capable of COMMIT and ROLLBACK operations on transactions) \par
+6. EXAMPLE \par
+7. FEDERATED (It is a storage engine that accesses data in tables of remote databases rather than in local tables. )\par
+8. ARCHIVE (The ARCHIVE storage engine is used for storing large amounts of data without indexes in a very small footprint. )\par
+9. CSV (The CSV storage engine stores data in text files using comma-separated values format.)\par
+10. BLACKHOLE (The BLACKHOLE storage engine acts as a "black hole" that accepts data but throws it away and does not store it. Retrievals always return an empty result)  \par
+\cf1 Questions : 12  What is use of header() function in php ?  \par
+\cf0 Answers : 12 The header() function sends a raw HTTP header to a client.We can use heder() \par
+function for redirection of pages. It is important to notice that header() must\par
+be called before any actual output is seen.. \par
+\cf1 Questions : 13 How can I execute a PHP script using command line?  \par
+\cf0 Answers : 13 Just run the PHP CLI (Command Line Interface) program and\par
+provide the PHP script file name as the command line argument. \par
+\cf1 Questions : 14 Suppose your Zend engine supports the mode <? ?> Then how can u\par
+configure your PHP Zend engine to support <?PHP ?> mode ?  \cf0\par
+Answers : 14 In php.ini file:\par
+set\par
+short_open_tag=on\par
+to make PHP support .\par
+\cf1 Questions : 15 Shopping cart online validation i.e. how can we configure Paypal,\par
+etc.?  \par
+\cf0 Answers : 15 Nothing more we have to do only redirect to the payPal url after\par
+submit all information needed by paypal like amount,adresss etc.  \par
+\cf1 Questions : 16 What is meant by nl2br()?  \par
+\cf0\highlight3 Answers : 16 Inserts HTML line breaks (<BR />) before all newlines in a string. \par
+\cf1\highlight0 Questions : 17 What is htaccess? Why do we use this and Where?  \par
+\cf0 Answers : 17 .htaccess files are configuration files of Apache Server \highlight3 which provide\par
+a way to make configuration changes on a per-directory basis\highlight0 . A file, \par
+containing one or more configuration directives, is placed in a particular\par
+document directory, and the directives apply to that directory, and all \par
+subdirectories thereof. \par
+\cf1 Questions : 18 How we get IP address of client, previous reference page etc ?  \par
+\cf0 Answers : 18 By using $_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_REFERER'] etc. \par
+\cf1 Questions : 19 What are the reasons for selecting lamp (Linux, apache, MySQL,\par
+PHP) instead of combination of other software programs, servers and\par
+operating systems?  \par
+\cf0 Answers : 19 All of those are open source resource. Security of Linux is more \par
+than windows. Apache is a better server that IIS both in\par
+functionality and security. MySQL is world most popular open source\par
+database. PHP is more faster that asp or any other scripting language. \par
+ \cf1 Questions : 20 How can we encrypt and decrypt a data present in a MySQL table\par
+using MySQL?  \par
+\cf0\par
+Answers : 20 AES_ENCRYPT () and AES_DECRYPT () \par
+\cf1 Questions : 21 How can we encrypt the username and password using PHP?  \par
+\cf0 Answers : 21 The functions in this section perform encryption and decryption, and\par
+compression and uncompression: \par
+\par
+encryption decryption \par
+AES_ENCRYT() AES_DECRYPT() \par
+ENCODE() DECODE() \par
+DES_ENCRYPT() DES_DECRYPT() \par
+ENCRYPT() Not available \par
+MD5() Not available \par
+OLD_PASSWORD() Not available \par
+PASSWORD() Not available \par
+SHA() or SHA1() Not available \par
+Not available UNCOMPRESSED_LENGTH() \par
+\cf1 Questions : 22 What are the features and advantages of object-oriented\par
+programming?  \par
+\cf0 Answers : 22 One of the main advantages of OO programming is its ease of\par
+modification; objects can easily be modified and added to a system there\par
+by reducing maintenance costs. OO programming is also considered to be\par
+better at modeling the real world than is procedural programming. It\par
+allows for more complicated and flexible interactions. OO systems are\par
+also easier for non-technical personnel to understand and easier for\par
+them to participate in the maintenance and enhancement of a system\par
+because it appeals to natural human cognition patterns.\par
+For some systems, an OO approach can speed development time since many\par
+objects are standard across systems and can be reused. Components that\par
+manage dates, shipping, shopping carts, etc. can be purchased and easily\par
+modified for a specific system \par
+\cf1 Questions : 23 What are the differences between procedure-oriented languages and\par
+object-oriented languages?  \par
+\cf0 Answers : 23 There are lot of difference between procedure language and object oriented like below\par
+1>Procedure language easy for new developer but complex to understand whole software as compare to object oriented model\par
+2>In Procedure language it is difficult to use design pattern mvc , Singleton pattern etc but in OOP you will be able to develop design pattern\par
+3>IN OOP language we will be able to reuse code like Inheritance ,polymorphism etc but this type of thing not available in procedure language on that our Fonda use COPY and PASTE . \par
+\cf1\strike Questions : 24 What is the use of friend function?  \par
+\pard\nowidctlpar\sa200\sl276\slmult1\cf0\strike0 Answers : 24 deleted\par
+\cf1 Questions : 25 What are the differences between public, private, protected,\par
+\strike static, transient, final and volatile?  \par
+\cf0\strike0 Answer : 25 Public: Public declared items can be accessed everywhere.\par
+Protected: Protected limits access to inherited and parent\par
+classes (and to the class that defines the item).\par
+Private: Private limits visibility only to the class that defines\par
+the item. \par
+\pard\nowidctlpar\sa200\sl276\slmult1\tx5580\cf1 Questions : 26 What are the different types of errors in PHP?  \par
+\pard\nowidctlpar\sa200\sl276\slmult1\cf0 Answer : 26 There are three types of errors:\par
+1. Notices: These are trivial, non-critical errors that PHP encounters while executing a script \endash  for example, accessing a variable that has not yet been defined. By default, such errors are not displayed to the user at all \endash  although, as you will see, you can change this default behavior.\par
+2. Warnings: These are more serious errors \endash  for example, attempting to include() a file which does not exist. By default, these errors are displayed to the user, but they do not result in script termination.\par
+3. Fatal errors: These are critical errors \endash  for example, instantiating an object of a non-existent class, or calling a non-existent function. These errors cause the immediate termination of the script, and PHP's default behavior is to display them to the user when they take place. \par
+\cf1 Questions : 27 What is the functionality of the function strstr and stristr?  \par
+\cf0 Answers : 27 strstr Returns part of string from the first occurrence of needle(sub string that we finding out ) to the end of string. \par
+$email= 'sonialouder@gmail.com';\par
+$domain = strstr($email, '@');\par
+echo $domain; // prints @gmail.com\par
+here @ is the needle \par
+stristr is case-insensitive means able not able to differenciate between a and A  \par
+\cf1\strike Questions : 28 What are the differences between PHP 3 and PHP 4 and PHP 5?  \par
+\cf0\strike0 Answer : 28 deleted\par
+\cf1 Questions : 29 How can we convert asp pages to PHP pages?  \par
+\cf0 Answer : 29 deleted\par
+\cf1 Questions : 30 What is the functionality of the function htmlentities?  \par
+\cf0 Answer : 30 Convert all applicable characters to HTML entities\par
+This function is identical to htmlspecialchars() in all ways, except\par
+with htmlentities(), all characters which have HTML character entity\par
+equivalents are translated into these entities. \par
+\cf1 Questions : 31 How can we get second of the current time using date function?\par
+\cf0  Answer : 31 $second = date("s"); \par
+\cf1\strike Questions : 32 How can we convert the time zones using PHP?  \par
+\cf0\strike0 Answer : 32 deleted \par
+\cf1\strike Questions : 33 What is meant by urlencode and urldocode?  \par
+\cf0\strike0 Answer : 33 deleted\par
+\cf1 Questions : 34 What is the difference between the functions unlink and unset?\cf0\par
+Answer : 34 unlink() deletes the given file from the file system.\par
+unset() makes a variable undefined. \par
+\cf1 Questions : 35 How can we register the variables into a session?  \par
+\cf0 Answer : 35 $_SESSION['name'] = "sonia"; \par
+\cf1\strike Questions : 36 How can we get the properties (size, type, width, height) of an\cf0\par
+\cf1 image using PHP image functions?  \par
+\cf0\strike0 Answer : 36 deleted\par
+\cf1 Questions : 37 How can we get the browser properties using PHP?  \par
+\cf0 Answer : 37 By using \par
+$_SERVER['HTTP_USER_AGENT']\par
+variable.\par
+\cf1 Questions : 38 What is the maximum size of a file that can be uploaded using PHP\par
+and how can we change this?  \par
+\cf0 Answer : 38 By default the maximum size is 2MB. and we can change the following\par
+setup at php.ini  upload_max_filesize = 2M \par
+\cf1 Questions : 39 How can we increase the execution time of a PHP script?  \par
+\cf0 Answer : 39 by changing the following setup at php.ini max_execution_time = 30\par
+; Maximum execution time of each script, in seconds \par
+\cf1\strike Questions : 40 How can we take a backup of a MySQL table and how can we restore\par
+it. ?  \strike0\par
+\cf0 Answer : 40 deleted\par
+\cf1 Questions : 41 How can we optimize or increase the speed of a MySQL select\par
+query?  \cf0\par
+Answer : 41 first of all instead of using select * from table1, use select\par
+column1, column2, column3.. from table1\par
+Look for the opportunity to introduce index in the table you are\par
+querying.\par
+use limit keyword if you are looking for any specific number of\par
+rows from the result set.\par
+\cf1 Questions : 42 How many ways can we get the value of current session id?  \par
+\cf0 Answer : 42 session_id() returns the session id for the current session. \par
+\cf1 Questions : 43 How can we destroy the session, how can we unset the variable of\par
+a session?  \par
+\cf0 Answer : 43 session_unregister \emdash  Unregister a global variable from the current\par
+session\par
+session_unset \emdash  Free all session variables \par
+\cf1 Questions : 44 How can we set and destroy the cookie n php?  \par
+\cf0 Answer : 44 By using setcookie(name, value, expire, path, domain); function we can set the cookie in php ;\par
+Set the cookies in past for destroy. like \par
+setcookie("user", "sonia", time()+3600); for set the cookie \par
+setcookie("user", "", time()-3600); for destroy or delete the cookies;  \par
+ \cf1 Questions : 45 How many ways we can pass the variable through the navigation\par
+between the pages?  \par
+\cf0 Answer : 45 GET/QueryString\par
+POST\par
+SESSION\par
+\cf1 Questions : 46 What is the difference between ereg_replace() and eregi_replace()?\par
+\cf0  Answer : 46 eregi_replace() function is identical to ereg_replace() except that\par
+this ignores case distinction when matching alphabetic\par
+characters.eregi_replace() function is identical to ereg_replace()\par
+except that this ignores case distinction when matching alphabetic\par
+characters. \par
+\cf1 Questions : 47 What are the different functions in sorting an array?  \par
+\cf0 Answer : 47 Sort(), arsort(),\par
+asort(), ksort(),\par
+natsort(), natcasesort(),\par
+rsort(), usort(),\par
+array_multisort(), and\par
+uksort(). \par
+\cf1 Questions : 48 How can we know the count/number of elements of an array?  \par
+\cf0 Answer : 48 2 ways\par
+a) sizeof($urarray) This function is an alias of count()\par
+b) count($urarray) \par
+\cf1\strike Questions : 49 what is session_set_save_handler in PHP?  \par
+\cf0\strike0 Answer : 49 deleted \par
+\cf1 Questions : 50 How can I know that a variable is a number or not using a JavaScript?  \par
+\cf0 Answer : 50 bool is_numeric ( mixed var)\par
+Returns TRUE if var is a number or a numeric string, FALSE otherwise.or use isNaN(mixed var)The isNaN() function is used to check if a value is not a number. \par
+\cf1 Questions : 51 List out some tools through which we can draw E-R diagrams for mysql.  \par
+\cf0 Answer : 51 Case Studio\par
+Smart Draw \par
+\cf1 Questions : 52 How can I retrieve values from one database server and store them\par
+in other database server using PHP?  \par
+\cf0 Answer : 52 deleted\par
+\cf1 Questions : 53 List out the predefined classes in PHP?  \par
+\cf0 Answer : 53 Directory\par
+stdClass\par
+__PHP_Incomplete_Class\par
+exception\par
+php_user_filter \par
+\cf1 Questions : 54 How can I make a script that can be bi-language (supports\par
+English, German)?  \par
+\cf0 Answer : 54 You can maintain two separate language file for each of the\par
+language. all the labels are putted in both language files as variables\par
+and assign those variables in the PHP source. on runtime choose the\par
+required language option. \par
+\cf1 Questions : 55 What are the difference between abstract class and interface?  \par
+\cf0 Answer : 55 Abstract class: abstract classes are the class where one or more\par
+methods are abstract but not necessarily all method has to be abstract.\par
+Abstract methods are the methods, which are declare in its class but not\par
+define. The definition of those methods must be in its extending class.\par
+Interface: Interfaces are one type of class where all the methods are\par
+abstract. That means all the methods only declared but not defined. All\par
+the methods must be define by its implemented class. \par
+\cf1 Questions : 56 How can we send mail using JavaScript?  \par
+\cf0 Answer : 56 JavaScript does not have any networking capabilities as it is\par
+designed to work on client site. As a result we can not send mails using\par
+JavaScript. But we can call the client side mail protocol mailto\par
+via JavaScript to prompt for an email to send. this requires the client\par
+to approve it. \par
+\cf1 Questions : 57 How can we repair a MySQL table?  \par
+\cf0 Answer : 57 The syntex for repairing a MySQL table is\par
+REPAIR TABLENAME, [TABLENAME, ], [Quick],[Extended]\par
+This command will repair the table specified if the quick is given the\par
+MySQL will do a repair of only the index tree if the extended is given\par
+it will create index row by row \par
+\cf1 Questions : 58 What are the advantages of stored procedures, triggers, indexes?\par
+\cf0 Answer : 58 A stored procedure is a set of SQL commands that can be compiled and\par
+stored in the server. Once this has been done, clients don't need to\par
+keep re-issuing the entire query but can refer to the stored procedure.\par
+This provides better overall performance because the query has to be\par
+parsed only once, and less information needs to be sent between the\par
+server and the client. You can also raise the conceptual level by having\par
+libraries of functions in the server. However, stored procedures of\par
+course do increase the load on the database server system, as more of\par
+the work is done on the server side and less on the client (application)\par
+side.Triggers will also be implemented. A trigger is effectively a type of\par
+stored procedure, one that is invoked when a particular event occurs.\par
+For example, you can install a stored procedure that is triggered each\par
+time a record is deleted from a transaction table and that stored\par
+procedure automatically deletes the corresponding customer from a\par
+customer table when all his transactions are deleted.Indexes are used to find rows with specific column values quickly.\par
+Without an index, MySQL must begin with the first row and then read\par
+through the entire table to find the relevant rows. The larger the\par
+table, the more this costs. If the table has an index for the columns in\par
+question, MySQL can quickly determine the position to seek to in the\par
+middle of the data file without having to look at all the data. If a\par
+table has 1,000 rows, this is at least 100 times faster than reading\par
+sequentially. If you need to access most of the rows, it is faster to\par
+read sequentially, because this minimizes disk seeks. \par
+\cf1 Questions : 59 What is the maximum length of a table name, database name, and\par
+fieldname in MySQL?  \par
+\cf0 Answer : 59 The following table describes the maximum length for each type of\par
+identifier. \par
+Identifier Maximum Length\par
+(bytes) \par
+Database 64 \par
+Table 64 \par
+Column 64 \par
+Index 64 \par
+Alias 255 \par
+There are some restrictions on the characters that may appear in\par
+identifiers:\par
+\cf1 Questions : 60 How many values can the SET function of MySQL take?  \par
+\cf0 Answer : 60 MySQL set can take zero or more values but at the maximum it can\par
+take 64 values \par
+\cf1 Questions : 61 What are the other commands to know the structure of table using\par
+MySQL commands except explain command?  \par
+\cf0 Answer : 61 describe Table-Name; \par
+\cf1 Questions : 62 How many tables will create when we create table, what are they?\cf0\par
+Answer : 62 The '.frm' file stores the table definition.\par
+The data file has a '.MYD' (MYData) extension.\par
+The index file has a '.MYI' (MYIndex) extension, \par
+\cf1 Questions : 63 What is the purpose of the following files having extensions 1) .frm\par
+2) .myd 3) .myi? What do these files contain?  \par
+\cf0 Answer : 63 In MySql, the default table type is MyISAM.\par
+Each MyISAM table is stored on disk in three files. The files have names\par
+that begin with the table name and have an extension to indicate the\par
+file type.\par
+The '.frm' file stores the table definition.\par
+The data file has a '.MYD' (MYData) extension.\par
+The index file has a '.MYI' (MYIndex) extension, \par
+\cf1 Questions : 64 What is maximum size of a database in MySQL?  \par
+\cf0 Answer : 64 If the operating system or filesystem places a limit on the number\par
+of files in a directory, MySQL is bound by that constraint.The efficiency of the operating system in handling large numbers of\par
+files in a directory can place a practical limit on the number of tables\par
+in a database. If the time required to open a file in the directory\par
+increases significantly as the number of files increases, database\par
+performance can be adversely affected.\par
+The amount of available disk space limits the number of tables.\par
+MySQL 3.22 had a 4GB (4 gigabyte) limit on table size. With the MyISAM\par
+storage engine in MySQL 3.23, the maximum table size was increased to\par
+65536 terabytes (2567 \endash  1 bytes). With this larger allowed table size,\par
+the maximum effective table size for MySQL databases is usually\par
+determined by operating system constraints on file sizes, not by MySQL\par
+internal limits.The InnoDB storage engine maintains InnoDB tables within a tablespace\par
+that can be created from several files. This allows a table to exceed\par
+the maximum individual file size. The tablespace can include raw disk\par
+partitions, which allows extremely large tables. The maximum tablespace\par
+size is 64TB.\par
+The following table lists some examples of operating system file-size\par
+limits. This is only a rough guide and is not intended to be definitive.\par
+For the most up-to-date information, be sure to check the documentation\par
+specific to your operating system.\par
+Operating System File-size LimitLinux 2.2-Intel 32-bit 2GB (LFS: 4GB)\par
+Linux 2.4+ (using ext3 filesystem) 4TB\par
+Solaris 9/10 16TB\par
+NetWare w/NSS filesystem 8TB\par
+Win32 w/ FAT/FAT32 2GB/4GB\par
+Win32 w/ NTFS 2TB (possibly larger)\par
+MacOS X w/ HFS+ 2TB \par
+\cf1 Questions : 65 Give the syntax of Grant and Revoke commands?  \par
+\cf0 Answer : 65 The generic syntax for grant is as following\par
+> GRANT [rights] on [database/s] TO [username@hostname] IDENTIFIED BY\par
+[password]\par
+now rights can be\par
+a) All privileges\par
+b) combination of create, drop, select, insert, update and delete etc.We can grant rights on all databse by using *.* or some specific\par
+database by database.* or a specific table by database.table_name\par
+username@hotsname can be either username@localhost, username@hostname\par
+and username@%\par
+where hostname is any valid hostname and % represents any name, the *.*\par
+any condition\par
+password is simply the password of userThe generic syntax for revoke is as following\par
+> REVOKE [rights] on [database/s] FROM [username@hostname]\par
+now rights can be as explained above\par
+a) All privileges\par
+b) combination of create, drop, select, insert, update and delete etc.\par
+username@hotsname can be either username@localhost, username@hostname\par
+and username@%\par
+where hostname is any valid hostname and % represents any name, the *.*\par
+any condition \par
+\cf1 Questions : 66 Explain Normalization concept?  \par
+\cf0 Answer : 66 The normalization process involves getting our data to conform to\par
+three progressive normal forms, and a higher level of normalization\par
+cannot be achieved until the previous levels have been achieved (there\par
+are actually five normal forms, but the last two are mainly academic and\par
+will not be discussed).First Normal FormThe First Normal Form (or 1NF) involves removal of redundant data\par
+from horizontal rows. We want to ensure that there is no duplication of\par
+data in a given row, and that every column stores the least amount of\par
+information possible (making the field atomic).Second Normal FormWhere the First Normal Form deals with redundancy of data across a\par
+horizontal row, Second Normal Form (or 2NF) deals with redundancy of\par
+data in vertical columns. As stated earlier, the normal forms are\par
+progressive, so to achieve Second Normal Form, your tables must already\par
+be in First Normal Form.Third Normal Form \par
+I have a confession to make; I do not often use Third Normal Form. In\par
+Third Normal Form we are looking for data in our tables that is not\par
+fully dependant on the primary key, but dependant on another value in\par
+the table\par
+\cf1 Questions : 67 How can we find the number of rows in a table using MySQL?  \par
+\cf0 Answer : 67 Use this for mysql\par
+>SELECT COUNT(*) FROM table_name; \par
+\cf1 Questions : 68 How can we find the number of rows in a result set using PHP?  \par
+\cf0 Answer : 68 $result = mysql_query($sql, $db_link);\par
+$num_rows = mysql_num_rows($result);\par
+echo "$num_rows rows found"; \par
+\cf1 Questions : 69 How many ways we can we find the current date using MySQL?  \par
+\cf0 Answer : 69 SELECT CURDATE();\par
+CURRENT_DATE() = CURDATE()\par
+for time use\par
+SELECT CURTIME();\par
+CURRENT_TIME() = CURTIME() \par
+\cf1 Questions : 70 What are the advantages and disadvantages of Cascading Style\par
+Sheets?  \par
+\cf0 Answer : 70 External Style SheetsAdvantagesCan control styles for multiple documents at once. Classes can be\par
+created for use on multiple HTML element types in many documents.\par
+Selector and grouping methods can be used to apply styles under complex\par
+contextsDisadvantagesAn extra download is required to import style information for each\par
+document The rendering of the document may be delayed until the external\par
+style sheet is loaded Becomes slightly unwieldy for small quantities of\par
+style definitionsEmbedded Style Sheets\par
+\ul Advantages\ulnone\b\par
+\b0 Classes can be created for use on multiple tag types in the document.\par
+Selector and grouping methods can be used to apply styles under complex\par
+contexts. No additional downloads necessary to receive style information\par
+\ul Disadvantages\ulnone\par
+This method can not control styles for multiple documents at once\par
+\ul\b\fs24 Inline Styles\ulnone\fs22\par
+\ul\b0 Advantages\ulnone\par
+Useful for small quantities of style definitions. Can override other\par
+style specification methods at the local level so only exceptions need\par
+to be listed in conjunction with other style methods\par
+\ul Disadvantages\ulnone\par
+Does not distance style information from content (a main goal of\par
+SGML/HTML). Can not control styles for multiple documents at once.\par
+Author can not create or control classes of elements to control multiple\par
+element types within the document. Selector grouping methods can not be\par
+used to create complex element addressing scenarios\par
+\cf1 Questions : 71 What type of inheritance that PHP supports?  \par
+\cf0 Answer : 71 In PHP an extended class is always dependent on a single base class,\par
+that is, multiple inheritance is not supported. Classes are extended\par
+using the keyword 'extends'.     \par
+\cf1 Questions : 72 What is the difference between Primary Key and\par
+Unique key?  \par
+\cf0 Answer : 72 Primary Key: A column in a table whose values uniquely identify the\par
+rows in the table. A primary key value cannot be NULL. \par
+Unique Key: Unique Keys are used to uniquely identify each row in the\par
+table. There can be one and only one row for each unique key value. So\par
+NULL can be a unique key.There can be only one primary key for a table but there can be more\par
+than one unique for a table.\par
+\pard\sa200\sl276\slmult1\cf1 Question : 73 what is garbage collection? default time ? refresh time?  \par
+\pard\nowidctlpar\sa200\sl276\slmult1\cf0 Answer : 73 Garbage Collection is an automated part of PHP , If the Garbage Collection process runs, it then analyzes any files in the /tmp for any session files that have not been accessed in a certain amount of time and physically deletes them. Garbage Collection process only runs in the default session save directory, which is /tmp. If you opt to save your sessions in a different directory, the Garbage Collection process will ignore it. the Garbage Collection process does not differentiate between which sessions belong to whom when run. This is especially important note on shared web servers. If the process is run, it deletes ALL files that have not been accessed in the directory. There are 3 PHP.ini variables, which deal with the garbage collector: PHP ini value name default session.gc_maxlifetime 1440 seconds or 24 minutes session.gc_probability 1 session.gc_divisor 100  \par
+\cf1 Questions : 74 What are the advantages/disadvantages of MySQL and PHP?  \par
+\cf0 Answer : 74 Both of them are open source software (so free of cost), support\par
+cross platform. php is faster then ASP and JSP.     \par
+\cf1 Questions : 75 What is the difference between GROUP BY and ORDER BY in Sql?  \par
+\cf0 Answer : 75 \b ORDER BY [col1],[col2],\'85,[coln]:\b0  Tels DBMS according to what columns\par
+it should sort the result. If two rows will hawe the same value in col1\par
+it will try to sort them according to col2 and so on.\par
+\b GROUP BY [col1],[col2],\'85,[coln]:\b0 Tels DBMS to group results with same value of\par
+column col1. You can use COUNT(col1), SUM(col1), AVG(col1) with it, if\par
+you want to count all items in group, sum all values or view average     \par
+\cf1 Questions : 76 What is the difference between char and varchar data types?  \par
+\cf0 Answer : 76 Set char to occupy n bytes and it will take n bytes even if u r\par
+storing a value of n-m bytes\par
+Set varchar to occupy n bytes and it will take only the required space\par
+and will not use the n bytes\par
+eg. name char(15) will waste 10 bytes if we store 'romharshan', if each char\par
+takes a byte\par
+eg. name varchar(15) will just use 5 bytes if we store 'romharshan', if each\par
+char takes a byte. rest 10 bytes will be free. \par
+\cf1 Questions : 77 What is the functionality of md5 function in PHP?  \par
+\cf0 Answer : 77 Calculate the md5 hash of a string. The hash is a 32-character\par
+hexadecimal number. I use it to generate keys which I use to identify\par
+users etc. If I add random no techniques to it the md5 generated now\par
+will be totally different for the same string I am using. \par
+\cf1 Questions : 78 How can I load data from a text file into a table?  \par
+\cf0 Answer : 78 you can use LOAD DATA INFILE file_name; syntax to load data\par
+from a text file. but you have to make sure thata) data is delimited\par
+b) columns and data matched correctly \par
+\cf1 Questions : 79 How can we know the number of days between two given dates using\par
+MySQL?  \par
+\cf0 Answer : 79 SELECT DATEDIFF("2007-03-07","2005-01-01"); \par
+\cf1 Questions : 80 How can we know the number of days between two given dates using PHP?  \par
+\cf0 Answer : 80 $date1 = date("Y-m-d");\par
+$date2 = "2006-08-15";\par
+$days = (strtotime($date1) - strtotime($date2)) / (60 * 60 * 24); \par
+\cf1 Questions : 81 How we load all classes that placed in different directory in one PHP File , means how to do auto load classes  \par
+\cf0 Answer : 81 \par
+by using spl_autoload_register('autoloader::funtion');\par
+Like below \par
+class autoloader\par
+\{\par
+public static function moduleautoloader($class)\par
+\{\par
+$path = $_SERVER['DOCUMENT_ROOT'] . "/modules/\{$class\}.php";\par
+if (is_readable($path)) require $path;\par
+\}\par
+public static function daoautoloader($class)\par
+\{\par
+$path = $_SERVER['DOCUMENT_ROOT'] . "/dataobjects/\{$class\}.php";\par
+if (is_readable($path)) require $path;\par
+\}\par
+public static function includesautoloader($class)\par
+\{\par
+$path = $_SERVER['DOCUMENT_ROOT'] . "/includes/\{$class\}.php";\par
+if (is_readable($path)) require $path;\par
+\}\par
+\}\par
+spl_autoload_register('autoloader::includesautoloader');\par
+spl_autoload_register('autoloader::daoautoloader');\par
+spl_autoload_register('autoloader::moduleautoloader');\par
+Questions : 82 How many types of Inheritances used in PHP and how we achieve it  \par
+Answer : 82 As far PHP concern it only support single Inheritance in scripting.\par
+we can also use interface to achieve multiple inheritance.  \par
+\cf1 Questions : 83 PHP how to know user has read the email?  \cf0\par
+Answers : 83 Using Disposition-Notification-To: in mailheader we can get read receipt.\par
+Add the possibility to define a read receipt when sending an email.\par
+It\rquote s quite straightforward, just edit email.php, and add this at vars definitions:\par
+var $readReceipt = null;\par
+And then, at \lquote createHeader\rquote  function add:\par
+if (!empty($this->readReceipt)) \{ \par
+$this->__header .= \lquote Disposition-Notification-To: \lquote  . $this->__formatAddress($this->readReceipt) . $this->_newLine; \par
+\}  \par
+\cf1 Questions : 84 What are default session time and path?  \par
+\cf0 Answers : 84 default session time in PHP is 1440 seconds or 24 minutes\par
+Default session save path id temporary folder /tmp  \par
+\cf1 Questions : 85 how to track user logged out or not? when user is idle ?  \par
+\cf0 Answers : 85 By checking the session variable exist or not while loading th page. As the session will exist longer as till browser closes. The default behaviour for sessions is to keep a session open indefinitely and only to expire a session when the browser is closed. This behaviour can be changed in the php.ini file by altering the line session.cookie_lifetime = 0 to a value in seconds. If you wanted the session to finish in 5 minutes you would set this to session.cookie_lifetime = 300 and restart your httpd server.      \par
+\cf1 Questions : 86 how to track no of user logged in ?  \cf0\par
+Answers : 86 whenever a user logs in track the IP, userID etc..and store it in a DB with a active flag while log out or sesion expire make it inactive. At any time by counting the no: of active records we can get the no: of visitors.  \par
+\cf1 Questions : 87 in PHP for pdf which library used?  \cf0\par
+Answers : 87 The PDF functions in PHP can create PDF files using the PDFlib library With version 6, PDFlib offers an object-oriented API for PHP 5 in addition to the function-oriented API for PHP 4. There is also the \'bb Panda module. FPDF is a PHP class which allows to generate PDF files with pure PHP, that is to say without using the PDFlib library. F from FPDF stands for Free: you may use it for any kind of usage and modify it to suit your needs. FPDF requires no extension (except zlib to activate compression and GD for GIF support) and works with PHP4 and PHP5.  \par
+\cf1 Questions : 88 for image work which library?  \par
+\cf0 Answers : 88 we will need to compile PHP with the GD library of image functions for this to work. GD and PHP may also require other libraries, depending on which image formats you want to work with.  \par
+\cf1 Questions : 89 what is design pattern? singleton pattern? \par
+\cf0 Answers : 89 A deleted\par
+\cf1 Questions : 90 what are magic methods?  \cf0\par
+Answers : 90 Magic methods are the members functions that is available to all the instance of class Magic methods always starts with "__". Eg. __construct All magic methods needs to be declared as public To use magic method they should be defined within the class or program scope Various Magic Methods used in PHP 5 are: __construct() __destruct() __set() __get() __call() __toString() __sleep() __wakeup() __isset() __unset() __autoload() __clone()  \par
+\cf1 Questions : 91 what is magic quotes?  \par
+\cf0 Answers : 91 Magic Quotes is a process that automagically escapes ncoming data to the PHP script. It\rquote s preferred to code with magic quotes off and to instead escape the data at runtime, as needed. This feature has been DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 6.0.0. Relying on this feature is highly discouraged.  \par
+\cf1 Questions : 92 what is cross site scripting? SQL injection?  \par
+\cf0 Answers : 92 Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications which allow code injection by malicious web users into the web pages viewed by other users. Examples of such code include HTML code and client-side scripts. SQL injection is a code injection technique that exploits a security vulnerability occurring in the database layer of an application. The vulnerability is present when user input is either incorrectly filtered for string literal escape characters embedded in SQL statements or user input is not strongly typed and thereby unexpectedly executed  \par
+\cf1 Questions : 93 what is URL rewriting? \cf0\par
+Answers : 93 Using URL rewriting we can convert dynamic URl to static URL Static URLs are known to be better than Dynamic URLs because of a number of reasons 1. Static URLs typically Rank better in Search Engines. 2. Search Engines are known to index the content of dynamic pages a lot slower compared to static pages. 3. Static URLs are always more friendlier looking to the End Users. along with this we can use URL rewriting in adding variables [cookies] to the URL to handle the sessions.  \par
+\cf1 Questions : 94 what is the major php security hole? how to avoid?  \par
+\cf0 Answers : 94 1. Never include, require, or otherwise open a file with a filename based on user input, without thoroughly checking it first. \par
+2. Be careful with eval() Placing user-inputted values into the eval() function can be extremely dangerous. You essentially give the malicious user the ability to execute any command he or she wishes! \par
+3. Be careful when using register_globals = ON It was originally designed to make programming in PHP easier (and that it did), but misuse of it often led to security holes \par
+4. Never run unescaped queries \par
+5. For protected areas, use sessions or validate the login every time. \par
+6. If you don\rquote t want the file contents to be seen, give the file a .php extension.  \par
+\cf1 Questions : 95 whether PHP supports Microsoft SQL server ?  \cf0\par
+Answers : 95 The SQL Server Driver for PHP v1.0 is designed to enable reliable, scalable integration with SQL Server for PHP applications deployed on the Windows platform. The Driver for PHP is a PHP 5 extension that allows the reading and writing of SQL Server data from within PHP scripts. using MSSQL or ODBC modules we can access Microsoft SQL server.  \par
+\cf1 Questions : 96 what is MVC? why its been used?  \cf0\par
+Answers : 96 Model-view-controller (MVC) is an architectural pattern used in software engineering. Successful use of the pattern isolates business logic from user interface considerations, resulting in an application where it is easier to modify either the visual appearance of the application or the underlying business rules without affecting the other. In MVC, the model represents the information (the data) of the application; the view corresponds to elements of the user interface such as text, checkbox items, and so forth; and the controller manages the communication of data and the business rules used to manipulate the data to and from the model. WHY ITS NEEDED IS 1 Modular separation of function 2 Easier to maintain 3 View-Controller separation means:\par
+A \emdash  Tweaking design (HTML) without altering code B \emdash  Web design staff can modify UI without understanding code \par
+\cf1 Questions : 97 what is framework? how it works? what is advantage? \par
+\cf0 Answers : 97 In general, a framework is a real or conceptual structure intended to serve as a support or guide for the building of something that expands the structure into something useful. Advantages : Consistent Programming Model Direct Support for Security Simplified Development Efforts Easy Application Deployment and Maintenance  \par
+\cf1 Questions : 98 what is CURL?  \cf0\par
+Answers : 98 CURL means Client URL Library\par
+curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, SCP, SFTP, TFTP, TELNET, DICT, LDAP, LDAPS and FILE. curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload, proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate, kerberos\'85), file transfer resume, proxy tunneling and a busload of other useful tricks.\par
+CURL allows you to connect and communicate to many different types of servers with many different types of protocols. libcurl currently supports the http, https, ftp, gopher, telnet, dict, file, and ldap protocols. libcurl also supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading (this can also be done with PHP\rquote s ftp extension), HTTP form based upload, proxies, cookies, and user+password authentication.  \par
+\cf1 Questions : 99 what is PDO ?  \cf0\par
+Answers : 99 The PDO ( PHP Data Objects ) extension defines a lightweight, consistent interface for accessing databases in PHP. if you are using the PDO API, you could switch the database server you used, from say PgSQL to MySQL, and only need to make minor changes to your PHP code. \par
+While PDO has its advantages, such as a clean, simple, portable API but its main disadvantage is that it doesn't allow you to use all of the advanced features that are available in the latest versions of MySQL server. For example, PDO does not allow you to use MySQL's support for Multiple Statements.\par
+Just need to use below code for connect mysql using PDO\par
+try \{\par
+$dbh = new PDO("mysql:host=$hostname;dbname=databasename", $username, $password);\par
+$sql = "SELECT * FROM employee";\par
+foreach ($dbh->query($sql) as $row)\par
+\{\par
+print $row['employee_name'] .' - '. $row['employee_age'] ;\par
+\}\par
+\}\par
+catch(PDOException $e)\par
+\{\par
+echo $e->getMessage();\par
+\}  \par
+\cf1 Questions : 100 What is PHP's mysqli Extension?  \par
+\cf0 Answers : 100 The mysqli extension, or as it is sometimes known, the MySQL improved extension, was developed to take advantage of new features found in MySQL systems versions 4.1.3 and newer. The mysqli extension is included with PHP versions 5 and later. \par
+The mysqli extension has a number of benefits, the key enhancements over the mysql extension being: \par
+=>Object-oriented interface \par
+=>Support for Prepared Statements \par
+=>Support for Multiple Statements \par
+=>Support for Transactions \par
+=>Enhanced debugging capabilities \par
+ \par
+}
+ 

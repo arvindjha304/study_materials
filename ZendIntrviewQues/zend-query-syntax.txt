@@ -1,0 +1,51 @@
+$target = json_decode(json_encode($target),true);
+
+
+
+ $select = $this->_db->select()
+				->from($table)
+			   ->where('option_id IN (?)', $options);;
+$results = $this->getAdapter()->fetchAll($select);
+return $results;
+
+------------------------------------------------------------
+
+$rows = $table->fetchAll(
+    $table->select()
+        ->where('bug_status = ?', 'NEW')
+        ->order('bug_id ASC')
+        ->limit(10, 0)
+    );
+-----------------------------------------------------------	
+	
+$row = $table->fetchRow(
+    $table->select()
+        ->where('bug_status = ?', 'NEW')
+        ->order('bug_id ASC')
+    );
+	
+------------------------------------------------------------	
+	$data = array(
+    'created_on'      => '2007-03-22',
+    'bug_description' => 'Something wrong',
+    'bug_status'      => 'NEW'
+	);
+	 
+	$table->insert($data);
+	
+-------------------------------------------------------------	
+	$data = array( 'email' => $email,
+		    'password' => $password,
+		    'firstName' => $firstName,
+		    'lastName' => $lastName,
+		    'active' => '1');
+$db->insert('user', $data);
+--------------------------------------------------------------
+
+$data = array('password' => $password,
+              'firstName' => $firstName,
+              'lastName' => $vlastname,
+              'accountUpdate' => new Zend_Db_Expr('accountUpdate+1'));
+$db->update('user', $data, 'id = '.$id);
+--------------------------------------------------------------
+$db->delete('user', 'id = '.$id);

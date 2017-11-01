@@ -1,0 +1,12 @@
+abs — Absolute value
+ceil — Round fractions up
+floor — Round fractions down
+getrandmax — Show largest possible random value
+max — Find highest value
+min — Find lowest value
+mt_getrandmax — Show largest possible random value
+mt_rand — Generate a better random value
+mt_srand — Seed the better random number generator
+rand — Generate a random integer
+round — Rounds a float
+srand — Seed the random number generator
